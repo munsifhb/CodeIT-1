@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*custom css*/
+
+.txt{
+    font-size: 3em;
+}
+
+.wrap{
+    width: 380px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrap::after{
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 100px;
+    background: linear-gradient(to right,rgba(0, 128, 128, 0.473),rgba(200, 212, 212, 0.61));
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin{
+    100%{transform: rotate(360deg);}
+}
+
+.wrp{
+    width: 376px;
+    height: 236px;
+    z-index: 2;
+}
+
+@media (max-width: 700px) {
+
+    .wrap{
+        width: 260px;
+    }
+
+    .wrp{
+        width: 256px;
+        
+    }
+    
+}
+
+.key{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation{
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+
+.none{
+    display: none;
+}
+
+
+.delay{
+width: 150px;
+height: 150px;
+background-color: blue;
+}
+
+.delay:hover{
+    width: 350px;
+}
+
+.delayo{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    transition-delay: 2s;
+    }
+    
+    .delayo:hover{
+        width: 350px;
+    }
+
+    .duration{
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        transition-duration: 2s;
+    }
+    .duration:hover{
+        width: 350px;
+    }
+
+.radial{
+    background: radial-gradient(red, yellow, green);
+}
+
+.conic{
+    background: conic-gradient(blue 45deg, green 90deg, violet 210deg);
+}
+
+.purple{
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+}
+
+.bgi{
+    width: 700px;
+    height: 1000px;
+}
+
+.shadow{
+    background-color: rgb(000, 255, 000);
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px;
+}
+
+
+.shadow-color{
+    background-color: rgb(000, 255, 000);
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px red;
+}
+
+
+.shadow-blur{
+    background-color: rgb(000, 255, 000);
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px 10px red;
+}
